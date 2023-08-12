@@ -2,8 +2,11 @@
 
 import React, { Fragment, useRef } from "react";
 import { Toaster, toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const AddBlogs = () => {
+  const router = useRouter();
+
   const titleRef = useRef<HTMLInputElement | null>(null);
   const descriptionRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -34,6 +37,7 @@ const AddBlogs = () => {
       });
       toast.success("Good to Go...", { id: "1" });
     }
+    router.push("/");
   };
 
   return (

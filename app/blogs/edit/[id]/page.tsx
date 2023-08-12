@@ -68,6 +68,7 @@ const EditBlog = ({ params }: { params: { id: string } }) => {
       });
       toast.success("Good to Go...", { id: "1" });
     }
+    router.push("/");
   };
 
   const handleDelete = async () => {
